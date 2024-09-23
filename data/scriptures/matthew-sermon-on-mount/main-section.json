@@ -1,16 +1,6 @@
 [
   {
     "chapter": 5,
-    "verse": 1,
-    "text": "And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came unto him:"
-  },
-  {
-    "chapter": 5,
-    "verse": 2,
-    "text": "And he opened his mouth, and taught them, saying,"
-  },
-  {
-    "chapter": 5,
     "verse": 3,
     "text": "Blessed are the poor in spirit: for theirs is the kingdom of heaven."
   },
@@ -535,15 +525,5 @@
     "chapter": 7,
     "verse": 27,
     "text": "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it."
-  },
-  {
-    "chapter": 7,
-    "verse": 28,
-    "text": "And it came to pass, when Jesus had ended these sayings, the people were astonished at his doctrine:"
-  },
-  {
-    "chapter": 7,
-    "verse": 29,
-    "text": "For he taught them as one having authority, and not as the scribes."
   }
 ]

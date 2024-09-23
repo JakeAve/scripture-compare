@@ -9,7 +9,12 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <Component />
+        <div class="relative bg-slate-50 text-slate-800 min-h-screen">
+          <header class="sticky top-0 bg-slate-500 px-2 py-2">
+            <a class="text-slate-50" href="/">Scripture Compare</a>
+          </header>
+          <Component />
+        </div>
       </body>
     </html>
   );

@@ -1,6 +1,8 @@
+import { splitText } from "./textHelpers.ts";
+
 export function diff(oldText: string, newText: string) {
-    const oldTokens = oldText.split(/\b|\n/);
-    const newTokens = newText.split(/\b|\n/);
+    const oldTokens = splitText(oldText);
+    const newTokens = splitText(newText);
 
     const changes = [];
     const matrix = Array(oldTokens.length + 1).fill(null).map(() =>

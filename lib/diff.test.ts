@@ -1,7 +1,7 @@
 import { assert, assertEquals, assertNotEquals } from "$std/assert/mod.ts";
 import { diff } from "./diff.ts";
-import _3Nephi from "../data/scriptures/3-nephi-12.json" with { type: "json" };
-import matthew from "../data/scriptures/matthew-5.json" with { type: "json" };
+import _3Nephi from "../data/scriptures/3-nephi-sermon-on-mount/main-section.json" with { type: "json" };
+import matthew from "../data/scriptures/matthew-sermon-on-mount/main-section.json" with { type: "json" };
 
 Deno.test("diff() simple example", () => {
     const d = diff("hello\nmy\nname\nis\njake", "hello\nmy\nname\nis\njosh");

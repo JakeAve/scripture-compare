@@ -1,5 +1,5 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
-import { Diff, Scripture } from "../components/Diff.tsx";
+import { Diff } from "../components/Diff.tsx";
 import isaiah50 from "../data/scriptures/isaiah-50.json" with { type: "json" };
 import _2nephi6 from "../data/scriptures/2-nephi-6.json" with { type: "json" };
 
@@ -11,11 +11,14 @@ export const handler: Handlers = {
     },
 };
 
-export default function Page(props: PageProps) {
+export default function Page(_props: PageProps) {
     return (
-        <main>
-            <h1>Isaiah 50</h1>
-            <Diff file1={isaiah50 as Scripture} file2={_2nephi6 as Scripture} />
+        <main class="p-4">
+            <h1 class="text-4xl text-center">Isaiah 50 - 52:2</h1>
+            <Diff
+                reference1={{ book: "Isaiah", verses: isaiah50 }}
+                reference2={{ book: "2 Nephi", verses: _2nephi6 }}
+            />
         </main>
     );
 }

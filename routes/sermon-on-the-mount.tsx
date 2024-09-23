@@ -1,7 +1,20 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
-import { Diff, Scripture } from "../components/Diff.tsx";
-import _3Nephi from "../data/scriptures/3-nephi-12.json" with { type: "json" };
-import matthew from "../data/scriptures/matthew-5.json" with { type: "json" };
+import { Diff } from "../components/Diff.tsx";
+import _3Nephi from "../data/scriptures/3-nephi-sermon-on-mount/main-section.json" with {
+    type: "json",
+};
+import _3NephiIntro from "../data/scriptures/3-nephi-sermon-on-mount/intro.json" with {
+    type: "json",
+};
+import matthew from "../data/scriptures/matthew-sermon-on-mount/main-section.json" with {
+    type: "json",
+};
+import matthewIntro from "../data/scriptures/matthew-sermon-on-mount/intro.json" with {
+    type: "json",
+};
+import matthewOutro from "../data/scriptures/matthew-sermon-on-mount/outro.json" with {
+    type: "json",
+};
 
 export const handler: Handlers = {
     async GET(_req: Request, ctx: FreshContext) {
@@ -13,9 +26,15 @@ export const handler: Handlers = {
 
 export default function Page(props: PageProps) {
     return (
-        <main>
-            <h1>Sermon on the Mount</h1>
-            <Diff file1={matthew as Scripture} file2={_3Nephi as Scripture} />
+        <main class="p-4">
+            <h1 class="text-4xl text-center">Sermon on the Mount</h1>
+            <Diff
+                reference1={{ book: "Matthew", verses: matthew }}
+                reference2={{ book: "3 Nephi", verses: _3Nephi }}
+                intro1={matthewIntro}
+                intro2={_3NephiIntro}
+                outro1={matthewOutro}
+            />
         </main>
     );
 }
