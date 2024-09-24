@@ -240,7 +240,7 @@ export function Diff(props: DiffProps) {
     );
 
     return (
-        <div class="mx-auto grid grid-cols-2 max-w-4xl gap-4">
+        <div class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4">
             {content}
         </div>
     );

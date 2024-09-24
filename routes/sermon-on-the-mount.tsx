@@ -15,16 +15,33 @@ import matthewOutro from "../data/scriptures/matthew-sermon-on-mount/outro.json"
     type: "json",
 };
 import { DiffPage } from "../components/DiffPage.tsx";
+import HeadElement from "../components/HeadElement.tsx";
 
-export default function Page(_props: PageProps) {
+export default function Page(props: PageProps) {
     return (
-        <DiffPage
-            title="Sermon on the Mount"
-            reference1={{ book: "Matthew", verses: matthew }}
-            reference2={{ book: "3 Nephi", verses: _3Nephi }}
-            intro1={matthewIntro}
-            intro2={_3NephiIntro}
-            outro1={matthewOutro}
-        />
+        <>
+            <HeadElement
+                pageProps={props}
+                author="Scripture Compare"
+                title="Sermon on the Mount"
+                imgPath="jesus-teaching"
+                tags={[
+                    "Book of Mormon",
+                    "Matthew",
+                    "3 Nephi",
+                    "Jesus Christ",
+                    "Joseph Smith",
+                ]}
+                snippet="Compare the KJV of Matthew 5-6 and the quote from Jesus Christ in the Americas from the Book of Mormon"
+            />
+            <DiffPage
+                title="Sermon on the Mount"
+                reference1={{ book: "Matthew", verses: matthew }}
+                reference2={{ book: "3 Nephi", verses: _3Nephi }}
+                intro1={matthewIntro}
+                intro2={_3NephiIntro}
+                outro1={matthewOutro}
+            />
+        </>
     );
 }

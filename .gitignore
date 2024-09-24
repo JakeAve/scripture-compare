@@ -11,4 +11,5 @@ _fresh/
 node_modules/
 .js
 test.json
+.DS_Store
 

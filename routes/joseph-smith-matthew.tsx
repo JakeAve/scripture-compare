@@ -9,14 +9,30 @@ import jsMatthewOutro from "../data/scriptures/joseph-smith-matthew/outro.json" 
     type: "json",
 };
 import { DiffPage } from "../components/DiffPage.tsx";
+import HeadElement from "../components/HeadElement.tsx";
 
-export default function Page(_props: PageProps) {
+export default function Page(props: PageProps) {
     return (
-        <DiffPage
-            title="Joseph Smith Matthew"
-            reference1={{ book: "Matthew", verses: matthew }}
-            reference2={{ book: "Joseph Smith Matthew", verses: jsMatthew }}
-            outro2={jsMatthewOutro}
-        />
+        <>
+            <HeadElement
+                pageProps={props}
+                author="Scripture Compare"
+                title="Joseph Smith Matthew"
+                imgPath="writing-in-notebook"
+                tags={[
+                    "Matthew",
+                    "Bible",
+                    "Joseph Smith",
+                    "Pearl of Great Price",
+                ]}
+                snippet="Compare the KVJ text with the inspired Joseph Smith translation"
+            />
+            <DiffPage
+                title="Joseph Smith Matthew"
+                reference1={{ book: "Matthew", verses: matthew }}
+                reference2={{ book: "Joseph Smith Matthew", verses: jsMatthew }}
+                outro2={jsMatthewOutro}
+            />
+        </>
     );
 }
