@@ -34,15 +34,17 @@ export default function Home(props: PageProps) {
           imgClass="absolute top-0 left-0 w-full contrast-75 brightness-75 object-cover object-top h-full"
         />
       </div>
-      <blockquote class="italic text-center mt-2" cite="https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng&id=p17#p17">
+      <div class="italic text-center py-2 px-4">
+        <blockquote cite="https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng&id=p17#p17">
+          <p>
+            And join them one to another into one stick; and they shall become
+            one in thine hand
+          </p>
+        </blockquote>
         <p>
-          And join them one to another into one stick; and they shall become one
-          in thine hand
+          —<cite>Ezekiel 37:17</cite>
         </p>
-      </blockquote>
-      <p class="text-center">
-        —<cite>Ezekiel 37:17</cite>
-      </p>
+      </div>
       <div class="px-4 py-8 mx-auto max-w-4xl grid gap-4 lg:gap-6 justify-center items-start grid-cols-1 md:grid-cols-2">
         <div class="flex flex-col ">
           <h2 class="text-xl md:text-2xl text-center">
