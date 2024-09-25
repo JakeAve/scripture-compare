@@ -38,7 +38,7 @@ export default function Home(props: PageProps) {
         <blockquote cite="https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng&id=p17#p17">
           <p>
             And join them one to another into one stick; and they shall become
-            one in thine hand
+            one in thine hand.
           </p>
         </blockquote>
         <p>

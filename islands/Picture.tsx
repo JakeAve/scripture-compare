@@ -1,3 +1,4 @@
+import { IS_BROWSER } from "$fresh/runtime.ts";
 import { MutableRef, useLayoutEffect, useRef, useState } from "preact/hooks";
 
 type imgSize = "sm" | "md" | "lg" | "xl" | "xs";
@@ -48,9 +49,17 @@ export default function Picture(props: PictureProps) {
   const { imagePath, alt, size = "lg", imgClass = "", height, width } = props;
   const path = (s: imgSize) => `${imagePath}-${s}.webp`;
   let srcset = path("sm") + " 320w, ";
-  if (size === "md" || size === "lg") srcset += path("md") + " 640w, ";
-  if (size === "lg") srcset += path("lg") + " 1024w";
-  if (size === 'xl') srcset += path("xl") + " 1800w";
+  if (size === "md" || size === "lg" || size === "xl") {
+    srcset += path("md") + " 640w, ";
+  }
+  if (IS_BROWSER) {
+    if (window.screen.width > 800) {
+      if (size === "lg" || size === "xl") srcset += path("lg") + " 1024w, ";
+    }
+    if (window.screen.width > 1200) {
+      if (size === "xl") srcset += path("xl") + " 1800w";
+    }
+  }
 
   return (
     <picture>

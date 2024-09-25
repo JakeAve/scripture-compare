@@ -4,6 +4,7 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $about from "./routes/about.tsx";
 import * as $charity from "./routes/charity.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $isaiah_2_14 from "./routes/isaiah-2-14.tsx";
@@ -24,7 +25,6 @@ import * as $om_1_nephi_chapter_6 from "./routes/om-1-nephi-chapter-6.tsx";
 import * as $om_1_nephi_chapter_7 from "./routes/om-1-nephi-chapter-7.tsx";
 import * as $om_2_nephi_chapter_1 from "./routes/om-2-nephi-chapter-1.tsx";
 import * as $sermon_on_the_mount from "./routes/sermon-on-the-mount.tsx";
-import * as $Counter from "./islands/Counter.tsx";
 import * as $Picture from "./islands/Picture.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -32,6 +32,7 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/about.tsx": $about,
     "./routes/charity.tsx": $charity,
     "./routes/index.tsx": $index,
     "./routes/isaiah-2-14.tsx": $isaiah_2_14,
@@ -54,7 +55,6 @@ const manifest = {
     "./routes/sermon-on-the-mount.tsx": $sermon_on_the_mount,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
     "./islands/Picture.tsx": $Picture,
   },
   baseUrl: import.meta.url,

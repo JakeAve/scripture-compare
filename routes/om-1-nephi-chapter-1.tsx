@@ -17,7 +17,7 @@ export default function Page(props: PageProps) {
             <HeadElement
                 pageProps={props}
                 author="Scripture Compare"
-                title="Original Book of Mormon Chapter 1"
+                title="Original Book of Mormon Manuscript: 1 Nephi Chapter 1"
                 imgPath="gold-plates"
                 tags={[
                     "Book of Mormon",
@@ -27,7 +27,7 @@ export default function Page(props: PageProps) {
                 snippet="Compare the text of the original Book of Mormon manuscript with the modern publication"
             />
             <DiffPage
-                title="Original Book of Mormon Manuscript Chapter 1"
+                title="Original Book of Mormon Manuscript: 1 Nephi Chapter 1"
                 reference1={{ book: "Original Manuscript", verses: manuscript }}
                 reference2={{
                     book: "Church of Jesus Christ 2015 Online",
