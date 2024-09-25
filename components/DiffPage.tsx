@@ -9,7 +9,7 @@ export function DiffPage(props: Props) {
 
     return (
         <main class="p-4">
-            <h1 class="text-4xl text-center mb-6">
+            <h1 class="text-2xl md:text-4xl text-center mb-6">
                 {title}
             </h1>
             <Diff {...otherProps} />

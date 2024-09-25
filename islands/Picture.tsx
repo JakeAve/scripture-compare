@@ -51,6 +51,7 @@ export default function Picture(props: PictureProps) {
   if (size === "md" || size === "lg") srcset += path("md") + " 640w, ";
   if (size === "lg") srcset += path("lg") + " 1024w";
   if (size === 'xl') srcset += path("xl") + " 1800w";
+
   return (
     <picture>
       <source srcset={isLoadingError ? "" : srcset} type="image/webp" />

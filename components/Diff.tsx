@@ -64,8 +64,8 @@ export function Diff(props: DiffProps) {
     });
 
     const content: JSX.Element[] = [
-        <h2 class="text-2xl justify-self-center" key="a">{reference1.book}</h2>,
-        <h2 class="text-2xl justify-self-center" key="b">{reference2.book}</h2>,
+        <h2 class="text-xl md:text-2xl text-center" key="a">{reference1.book}</h2>,
+        <h2 class="text-xl md:text-2xl text-center" key="b">{reference2.book}</h2>,
         ...intro1Content,
         <p class="col-start-2 col-span-1"></p>,
         ...intro2Content,
