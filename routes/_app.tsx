@@ -15,7 +15,7 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body class="bg-slate-500">
-        <div class="relative bg-slate-50 text-slate-800 min-h-screen">
+        <div class="relative bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen">
           <Header />
           <Component />
           <Footer />

@@ -66,7 +66,7 @@ export default function Picture(props: PictureProps) {
       <source srcset={isLoadingError ? "" : srcset} type="image/webp" />
       <img
         loading={loading}
-        class={imgClass + " bg-gray-500"}
+        class={imgClass + " bg-gray-500 dark:bg-gray-900"}
         src={isLoadingError ? "/assets/smart_toy.svg" : imagePath + ".jpeg"}
         alt={alt}
         height={height}

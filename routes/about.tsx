@@ -1,8 +1,8 @@
 export default function About() {
     return (
-        <main class="mx-auto max-w-xl p-4 flex flex-col gap-4">
+        <main class="mx-auto max-w-xl p-4 flex flex-col gap-4 text-lg">
             <h1 class="text-center text-4xl">About</h1>
-            <h2 class="text-2xl">What</h2>
+            <h2 class="text-3xl">What</h2>
             <p>
                 The Scripture Compare tool highlights the specific differences
                 in versions of similar texts. Any change in capitalization,
@@ -12,7 +12,7 @@ export default function About() {
                 does not compare verse or chapter numbers, but exclusively
                 compares the sacred texts.
             </p>
-            <h2 class="text-2xl">How</h2>
+            <h2 class="text-3xl">How</h2>
             <p>
                 This tool implements a simple Longest Common Subsequence (LCS)
                 algorithm. After comparing the texts, it recreates both texts,
@@ -32,7 +32,7 @@ export default function About() {
                 side comparison helps me notice any changes without taking away
                 my ability to understand the context of both files.
             </p>
-            <h2 class="text-2xl">Why</h2>
+            <h2 class="text-3xl">Why</h2>
             <p>
                 I've always been interested in the Isaiah chapters of the Book
                 of Mormon and wondered about their significance. If the text was
@@ -118,7 +118,7 @@ export default function About() {
                 written by multiple people on multiple occasions are typically
                 word for word the same.
             </p>
-            <h2 class="text-2xl">Plans for the Future</h2>
+            <h2 class="text-3xl">Plans for the Future</h2>
             <p>
                 I think this project has a few more things to offer. As
                 referenced before, I would like to be able to compare different
@@ -158,7 +158,7 @@ export default function About() {
                 changes, while taking the oxygen out of faithless assertions and
                 falsehoods claimed by naysayers.
             </p>
-            <h2 class="text-2xl">Testimony</h2>
+            <h2 class="text-3xl">Testimony</h2>
             <p>
                 No forward from a member of the Church of Jesus Christ of
                 Latter-day Saints would be complete without their testimony,

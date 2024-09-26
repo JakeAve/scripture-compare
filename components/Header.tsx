@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header class="sticky z-20 top-0 bg-slate-500 px-4 md:px-6 py-2 shadow-md flex justify-between items-center gap-4">
+        <header class="sticky z-20 top-0 bg-slate-500 dark:bg-slate-700 px-4 md:px-6 py-2 shadow-md flex justify-between items-center gap-4">
             <div>
                 <a
                     class="text-slate-50"

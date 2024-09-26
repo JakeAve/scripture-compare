@@ -31,7 +31,7 @@ export default function Home(props: PageProps) {
           width={1800}
           height={1024}
           alt="A man holding a representation of the stick of Efrain and the stick of Judah"
-          imgClass="absolute top-0 left-0 w-full contrast-75 brightness-75 object-cover object-top h-full"
+          imgClass="absolute top-0 left-0 w-full contrast-75 brightness-75 dark:brightness-[.25] object-cover object-top h-full"
         />
       </div>
       <div class="italic text-center py-2 px-4">
@@ -46,11 +46,11 @@ export default function Home(props: PageProps) {
         </p>
       </div>
       <div class="px-4 pt-4 py-8 mx-auto max-w-4xl grid gap-4 lg:gap-6 justify-center items-start grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col ">
+        <div class="flex flex-col gap-2">
           <h2 class="text-xl md:text-2xl text-center">
             Isaiah and the Book of Mormon
           </h2>
-          <ul class="flex flex-col gap-2 bg-slate-100 shadow-md p-6 rounded-md">
+          <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
             <li>
               <a class="underline" href="/isaiah-2-14">
                 Isaiah 2-14 and 2 Nephi 12-24
@@ -84,11 +84,11 @@ export default function Home(props: PageProps) {
           </ul>
         </div>
 
-        <div class="flex flex-col ">
+        <div class="flex flex-col gap-2">
           <h2 class="text-xl md:text-2xl text-center">
             KJV and the Book of Mormon
           </h2>
-          <ul class="flex flex-col gap-2 bg-slate-100 shadow-md p-6 rounded-md">
+          <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
             <li>
               <a class="underline" href="/sermon-on-the-mount">
                 Matthew 5-6 and 3 Nephi 12-13 (Sermon on the Mount)
@@ -111,11 +111,11 @@ export default function Home(props: PageProps) {
             </li>
           </ul>
         </div>
-        <div class="flex flex-col ">
+        <div class="flex flex-col gap-2">
           <h2 class="text-xl md:text-2xl text-center">
             Book of Mormon Manuscripts
           </h2>
-          <ul class="flex flex-col gap-2 bg-slate-100 shadow-md p-6 rounded-md">
+          <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
             <li>
               <a
                 class="underline"

@@ -22,8 +22,8 @@ export interface DiffProps {
     outro2?: Verse[];
 }
 
-const side1Color = "bg-blue-200";
-const side2Color = "bg-green-200";
+const side1Color = "bg-blue-200 dark:bg-blue-900";
+const side2Color = "bg-green-200 dark:bg-green-900";
 
 export function Diff(props: DiffProps) {
     const { reference1, intro1, outro1, reference2, intro2, outro2 } = props;
