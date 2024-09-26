@@ -1,6 +1,7 @@
 import { JSX } from "preact/jsx-runtime";
 import { diff } from "../lib/diff.ts";
 import { insertSpaceBetween, splitText } from "../lib/textHelpers.ts";
+import WordMatch from "./WordMatch.tsx";
 
 interface Verse {
     chapter: number;
@@ -64,8 +65,12 @@ export function Diff(props: DiffProps) {
     });
 
     const content: JSX.Element[] = [
-        <h2 class="text-xl md:text-2xl text-center" key="a">{reference1.book}</h2>,
-        <h2 class="text-xl md:text-2xl text-center" key="b">{reference2.book}</h2>,
+        <h2 class="text-xl md:text-2xl text-center" key="a">
+            {reference1.book}
+        </h2>,
+        <h2 class="text-xl md:text-2xl text-center" key="b">
+            {reference2.book}
+        </h2>,
         ...intro1Content,
         <p class="col-start-2 col-span-1"></p>,
         ...intro2Content,
@@ -128,10 +133,16 @@ export function Diff(props: DiffProps) {
             currRows1.push(row1);
             currRows2.push(row2);
             c1.push(
-                <>{t1}{insertSpaceBetween(t1, split1?.[t1Idx])}</>,
+                <WordMatch id={'a' + i.toString()}>
+                    {t1}
+                    {insertSpaceBetween(t1, split1?.[t1Idx])}
+                </WordMatch>,
             );
             c2.push(
-                <>{t2}{insertSpaceBetween(t2, split2?.[t2Idx])}</>,
+                <WordMatch id={'b' + i.toString()}>
+                    {t2}
+                    {insertSpaceBetween(t2, split2?.[t2Idx])}
+                </WordMatch>,
             );
         }
 
@@ -240,7 +251,10 @@ export function Diff(props: DiffProps) {
     );
 
     return (
-        <div class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4">
+        <div
+            data-diff-container
+            class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4"
+        >
             {content}
         </div>
     );

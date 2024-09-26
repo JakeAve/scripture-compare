@@ -1,3 +1,4 @@
+import WordMatchEventListener from "../islands/WordMatchEventListener.tsx";
 import { Diff, DiffProps } from "./Diff.tsx";
 
 interface Props extends DiffProps {
@@ -13,6 +14,7 @@ export function DiffPage(props: Props) {
                 {title}
             </h1>
             <Diff {...otherProps} />
+            <WordMatchEventListener />
         </main>
     );
 }
