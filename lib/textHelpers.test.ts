@@ -1,4 +1,4 @@
-import { assert, assertEquals, assertNotEquals } from "$std/assert/mod.ts";
+import { assert, assertEquals } from "$std/assert/mod.ts";
 import { isPunctuation, splitText } from "./textHelpers.ts";
 
 Deno.test("splitText()", () => {
