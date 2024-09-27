@@ -18,6 +18,7 @@ export default function App({ Component }: PageProps) {
           rel="manifest"
           href="/manifest.json"
         />
+        <script type="module" src="/register.js" />
       </head>
       <body class="bg-slate-500 dark:bg-slate-700">
         <div class="relative bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen">
