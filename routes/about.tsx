@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <main class="mx-auto max-w-xl p-4 flex flex-col gap-4 text-lg">
+        <main class="mx-auto max-w-xl p-4 md:px-6 flex flex-col gap-4 text-lg">
             <h1 class="text-center text-4xl">About</h1>
             <h2 class="text-3xl">What</h2>
             <p>
