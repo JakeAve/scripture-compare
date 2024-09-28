@@ -1,6 +1,31 @@
+import { IS_BROWSER } from "$fresh/runtime.ts";
+import { signal } from "@preact/signals";
+import { useRef } from "preact/hooks";
+
+const lastScroll = signal(0);
+
 export default function Header() {
+    const headerRef = useRef<null | HTMLElement>(null);
+
+    if (IS_BROWSER) {
+        if (location.pathname !== "/") {
+            globalThis.addEventListener("scroll", () => {
+                if (lastScroll.value < globalThis.scrollY) {
+                    headerRef.current?.classList.add("scale-y-0");
+                } else {
+                    headerRef.current?.classList.remove("scale-y-0");
+                }
+
+                lastScroll.value = globalThis.scrollY;
+            }, { passive: true });
+        }
+    }
+
     return (
-        <header class="sticky z-20 top-0 bg-slate-500 dark:bg-slate-700 px-4 md:px-6 py-2 shadow-md flex justify-between items-center gap-4">
+        <header
+            ref={headerRef}
+            class="sticky ease-out duration-300 origin-top z-20 top-0 bg-slate-500 dark:bg-slate-700 px-4 md:px-6 py-2 shadow-md flex justify-between items-center gap-4"
+        >
             <div>
                 <a
                     class="text-slate-50"

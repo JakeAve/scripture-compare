@@ -1,6 +1,6 @@
 import { type PageProps } from "$fresh/server.ts";
 import Footer from "../components/Footer.tsx";
-import Header from "../components/Header.tsx";
+import Header from "../islands/Header.tsx";
 export default function App({ Component }: PageProps) {
   return (
     <html lang="en" class="bg-slate-500 dark:bg-slate-700">

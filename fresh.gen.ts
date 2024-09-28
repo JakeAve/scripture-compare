@@ -25,6 +25,7 @@ import * as $om_1_nephi_chapter_6 from "./routes/om-1-nephi-chapter-6.tsx";
 import * as $om_1_nephi_chapter_7 from "./routes/om-1-nephi-chapter-7.tsx";
 import * as $om_2_nephi_chapter_1 from "./routes/om-2-nephi-chapter-1.tsx";
 import * as $sermon_on_the_mount from "./routes/sermon-on-the-mount.tsx";
+import * as $Header from "./islands/Header.tsx";
 import * as $Picture from "./islands/Picture.tsx";
 import * as $WordMatchEventListener from "./islands/WordMatchEventListener.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -56,6 +57,7 @@ const manifest = {
     "./routes/sermon-on-the-mount.tsx": $sermon_on_the_mount,
   },
   islands: {
+    "./islands/Header.tsx": $Header,
     "./islands/Picture.tsx": $Picture,
     "./islands/WordMatchEventListener.tsx": $WordMatchEventListener,
   },
