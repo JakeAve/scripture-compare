@@ -5,13 +5,14 @@ export default function OfflineMessage() {
     const ref = useRef<HTMLDivElement | null>(null);
 
     if (IS_BROWSER) {
-        globalThis.addEventListener("offline", () => {
-            ref.current?.classList.remove("hidden");
-        });
         globalThis.addEventListener("online", () => {
             ref.current?.classList.add("hidden");
         });
-        
+
+        globalThis.addEventListener("offline", () => {
+            ref.current?.classList.remove("hidden");
+        });
+
         if (navigator.onLine) {
             ref.current?.classList.add("hidden");
         } else {
@@ -22,7 +23,7 @@ export default function OfflineMessage() {
         <div
             ref={ref}
             id="offline-message"
-            class="sticky top-8 z-30 bg-white hidden"
+            class="sticky top-0 z-30 bg-white hidden"
         >
             <p class="text-center text-slate-950">
                 You've lost internet connection. Some pages might not load.

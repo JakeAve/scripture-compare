@@ -1,23 +1,23 @@
-const PRE_CACHE = "pre-cache-c6610340992457899904eb9ebb6ee85620c75070";
+const PRE_CACHE = "pre-cache-f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f";
 const RUNTIME = "runtime";
 
 const PRE_CACHE_URLS = [
   "/styles.css",
   "/register.js",
   "/favicon.ico",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/main.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/chunk-G2PFKLIM.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/chunk-FEDUQ665.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/deserializer.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/signals.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/chunk-FSUZ4Z2X.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/chunk-ZTNRVIJH.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/island-header.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/chunk-LLPNOAVM.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/island-offline.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/island-picture.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/island-wordmatcheventlistener.js",
-  "/_frsh/js/c6610340992457899904eb9ebb6ee85620c75070/metafile.json"
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/main.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/chunk-7O42C3QO.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/chunk-FEDUQ665.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/deserializer.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/signals.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/chunk-FSUZ4Z2X.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/chunk-ZTNRVIJH.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/island-header.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/chunk-LLPNOAVM.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/island-offline.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/island-picture.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/island-wordmatcheventlistener.js",
+  "/_frsh/js/f77e4bfb5e8ba124d5668ca5c9069dd97dbd782f/metafile.json"
 ];
 
 self.addEventListener("install", (event) => {
