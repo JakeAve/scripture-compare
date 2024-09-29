@@ -6,21 +6,16 @@
     "manifest": "deno task cli manifest $(pwd)",
     "imgs": "deno run --allow-read --allow-write=./static --allow-env --allow-run ./scripts/convertImages.ts",
     "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "build": "deno run -A dev.ts build",
+    "build": "deno run -A dev.ts build && deno run --allow-read=./static/sw.js,./routes --allow-write=./static/sw.js ./scripts/updateSW.ts",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "lint": {
     "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
+      "tags": ["fresh", "recommended"]
     }
   },
-  "exclude": [
-    "**/_fresh/*"
-  ],
+  "exclude": ["**/_fresh/*"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "preact": "https://esm.sh/preact@10.19.6",

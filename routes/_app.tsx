@@ -1,6 +1,7 @@
 import { type PageProps } from "$fresh/server.ts";
 import Footer from "../components/Footer.tsx";
 import Header from "../islands/Header.tsx";
+import OfflineMessage from "../islands/Offline.tsx";
 export default function App({ Component }: PageProps) {
   return (
     <html lang="en" class="bg-slate-500 dark:bg-slate-700">
@@ -23,6 +24,7 @@ export default function App({ Component }: PageProps) {
       <body class="bg-slate-500 dark:bg-slate-700">
         <div class="relative bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen">
           <Header />
+          <OfflineMessage />
           <Component />
           <Footer />
         </div>
