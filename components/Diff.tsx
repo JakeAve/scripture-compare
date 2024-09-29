@@ -7,6 +7,7 @@ interface Verse {
     chapter: number;
     verse: number;
     text: string;
+    source?: string;
 }
 
 export interface Reference {
@@ -133,13 +134,13 @@ export function Diff(props: DiffProps) {
             currRows1.push(row1);
             currRows2.push(row2);
             c1.push(
-                <WordMatch id={'a' + i.toString()}>
+                <WordMatch id={"a" + i.toString()}>
                     {t1}
                     {insertSpaceBetween(t1, split1?.[t1Idx])}
                 </WordMatch>,
             );
             c2.push(
-                <WordMatch id={'b' + i.toString()}>
+                <WordMatch id={"b" + i.toString()}>
                     {t2}
                     {insertSpaceBetween(t2, split2?.[t2Idx])}
                 </WordMatch>,
@@ -159,10 +160,13 @@ export function Diff(props: DiffProps) {
                 >
                     {v1 && (
                         <>
-                            <span class="font-medium">
+                            <a
+                                class="font-medium hover:underline focus:underline active:underline me-2"
+                                target="_blank"
+                                href={v1?.source}
+                            >
                                 {v1.chapter}:{v1.verse}
-                                {" "}
-                            </span>
+                            </a>
                             {c1}
                         </>
                     )}
@@ -192,10 +196,13 @@ export function Diff(props: DiffProps) {
                 >
                     {v2 && (
                         <>
-                            <span class="font-medium">
+                            <a
+                                class="font-medium hover:underline focus:underline active:underline me-2"
+                                target="_blank"
+                                href={v2?.source}
+                            >
                                 {v2.chapter}:{v2.verse}
-                                {" "}
-                            </span>
+                            </a>
                             {c2}
                         </>
                     )}
