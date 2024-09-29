@@ -19,6 +19,21 @@ export default function Header() {
                 lastScroll.value = globalThis.scrollY;
             }, { passive: true });
         }
+
+        globalThis.addEventListener("online", () => {
+            headerRef.current?.classList.remove("top-6");
+        });
+
+        globalThis.addEventListener("offline", () => {
+            headerRef.current?.classList.add("top-6");
+        });
+
+
+        if (navigator.onLine) {
+            headerRef.current?.classList.remove("top-6");
+        } else {
+            headerRef.current?.classList.add("top-6");
+        }
     }
 
     return (
