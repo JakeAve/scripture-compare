@@ -10,7 +10,10 @@ export default function Header() {
     if (IS_BROWSER) {
         if (location.pathname !== "/") {
             globalThis.addEventListener("scroll", () => {
-                if (lastScroll.value < globalThis.scrollY) {
+                if (
+                    lastScroll.value < globalThis.scrollY &&
+                    globalThis.scrollY > 0
+                ) {
                     headerRef.current?.classList.add("scale-y-0");
                 } else {
                     headerRef.current?.classList.remove("scale-y-0");
@@ -27,7 +30,6 @@ export default function Header() {
         globalThis.addEventListener("offline", () => {
             headerRef.current?.classList.add("top-6");
         });
-
 
         if (navigator.onLine) {
             headerRef.current?.classList.remove("top-6");
