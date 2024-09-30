@@ -83,7 +83,6 @@ export default function Home(props: PageProps) {
             </li>
           </ul>
         </div>
-
         <div class="flex flex-col gap-2">
           <h2 class="text-xl md:text-2xl text-center">
             KJV and the Book of Mormon
@@ -107,6 +106,23 @@ export default function Home(props: PageProps) {
             <li>
               <a class="underline" href="/charity">
                 1 Corinthians 13 and Moroni 7 (Charity)
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-xl md:text-2xl text-center">
+            Writings and Revelations of Joseph Smith
+          </h2>
+          <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
+            <li>
+              <a class="underline" href="/malachi-4">
+                Malachi 4 and Angel Moroni
+              </a>
+            </li>
+            <li>
+              <a class="underline" href="/joseph-smith-matthew">
+                Matthew 23-24 and Joseph Smith Matthew
               </a>
             </li>
           </ul>

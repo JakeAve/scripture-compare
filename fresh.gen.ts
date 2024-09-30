@@ -15,6 +15,7 @@ import * as $isaiah_53 from "./routes/isaiah-53.tsx";
 import * as $isaiah_54 from "./routes/isaiah-54.tsx";
 import * as $joseph_smith_matthew from "./routes/joseph-smith-matthew.tsx";
 import * as $malachi_3_4 from "./routes/malachi-3-4.tsx";
+import * as $malachi_4 from "./routes/malachi-4.tsx";
 import * as $micah_5 from "./routes/micah-5.tsx";
 import * as $om_1_nephi_chapter_1 from "./routes/om-1-nephi-chapter-1.tsx";
 import * as $om_1_nephi_chapter_2 from "./routes/om-1-nephi-chapter-2.tsx";
@@ -46,6 +47,7 @@ const manifest = {
     "./routes/isaiah-54.tsx": $isaiah_54,
     "./routes/joseph-smith-matthew.tsx": $joseph_smith_matthew,
     "./routes/malachi-3-4.tsx": $malachi_3_4,
+    "./routes/malachi-4.tsx": $malachi_4,
     "./routes/micah-5.tsx": $micah_5,
     "./routes/om-1-nephi-chapter-1.tsx": $om_1_nephi_chapter_1,
     "./routes/om-1-nephi-chapter-2.tsx": $om_1_nephi_chapter_2,
