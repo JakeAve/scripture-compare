@@ -41,10 +41,10 @@ export default function About() {
                 copy entire chapters into their records? What was so important
                 about it that Joseph Smith, Oliver Cowdery, Egbert Grandin, and
                 many other editors would have to re-copy the text into the Book
-                of Mormon and millions of readers would be invited re-read it?
-                The Book of Mormon records that Jesus Christ Himself quoted the
-                entirety of Isaiah 54 and many other Bible passages in His visit
-                to the Americas. The Savior commanded His ancient American
+                of Mormon and millions of readers would be invited to re-read
+                it? The Book of Mormon records that Jesus Christ Himself quoted
+                the entirety of Isaiah 54 and many other Bible passages in His
+                visit to the Americas. The Savior commanded His ancient American
                 Church to study Isaiah: "Yea, a commandment I give unto you that
                 ye search these things diligently; for great are the words of
                 Isaiah." 3 Nephi 23:1.
