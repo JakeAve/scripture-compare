@@ -67,7 +67,7 @@ export default function Picture(props: PictureProps) {
       <img
         loading={loading}
         class={imgClass + " bg-gray-500 dark:bg-gray-900"}
-        src={isLoadingError ? "/assets/smart_toy.svg" : imagePath + ".jpeg"}
+        src={isLoadingError ? "/svg/menu_book.svg" : imagePath + ".jpeg"}
         alt={alt}
         height={height}
         width={width}
