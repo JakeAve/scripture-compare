@@ -24,6 +24,7 @@ async function updateSW() {
         "/styles.css",
         "/register.js",
         "/favicon.ico",
+        "/fonts/Mrs_Saint_Delafield/MrsSaintDelafield-Regular-abrv.ttf",
     ]);
 
     for (const file in snapshot.files) {

@@ -18,12 +18,14 @@ export default function Header() {
                     document.querySelectorAll(".diff-header").forEach((el) => {
                         el.classList.add("top-0");
                         el.classList.remove("top-9");
+                        el.classList.add('line-clamp-1');
                     });
                 } else {
                     headerRef.current?.classList.remove("scale-y-0");
                     document.querySelectorAll(".diff-header").forEach((el) => {
                         el.classList.add("top-9");
                         el.classList.remove("top-0");
+                        el.classList.remove('line-clamp-1');
                     });
                 }
 
