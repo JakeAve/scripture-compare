@@ -2,6 +2,7 @@ import { JSX } from "preact/jsx-runtime";
 import { diff } from "../lib/diff.ts";
 import { insertSpaceBetween, splitText } from "../lib/textHelpers.ts";
 import WordMatch from "./WordMatch.tsx";
+import DiffHeader from "./DiffHeader.tsx";
 
 interface Verse {
     chapter: number;
@@ -66,12 +67,12 @@ export function Diff(props: DiffProps) {
     });
 
     const content: JSX.Element[] = [
-        <h2 class="text-xl md:text-2xl text-center" key="a">
+        <DiffHeader key="a">
             {reference1.book}
-        </h2>,
-        <h2 class="text-xl md:text-2xl text-center" key="b">
+        </DiffHeader>,
+        <DiffHeader key="b">
             {reference2.book}
-        </h2>,
+        </DiffHeader>,
         ...intro1Content,
         <p class="col-start-2 col-span-1"></p>,
         ...intro2Content,
@@ -260,7 +261,7 @@ export function Diff(props: DiffProps) {
     return (
         <div
             data-diff-container
-            class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4"
+            class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4 font-serif relative"
         >
             {content}
         </div>
