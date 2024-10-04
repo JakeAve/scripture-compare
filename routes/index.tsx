@@ -22,7 +22,7 @@ export default function Home(props: PageProps) {
         ]}
       />
       <div class="relative flex justify-center items-center h-24 md:h-48">
-        <h1 class="relative w-full mix-blend-plus-lighter text-3xl md:text-7xl text-center text-slate-500 z-10">
+        <h1 class="font-display relative w-full mix-blend-plus-lighter text-5xl md:text-9xl text-center text-slate-500 z-10">
           Scripture Compare
         </h1>
         <Picture
@@ -30,11 +30,12 @@ export default function Home(props: PageProps) {
           imagePath="imgs/two-scrolls"
           width={1800}
           height={1024}
+          blur={false}
           alt="A man holding a representation of the stick of Efrain and the stick of Judah"
           imgClass="absolute top-0 left-0 w-full contrast-75 brightness-75 dark:brightness-[.25] object-cover object-top h-full"
         />
       </div>
-      <div class="italic text-center py-2 px-4">
+      <div class="font-serif italic text-xlg text-center py-2 px-4">
         <blockquote cite="https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng&id=p17#p17">
           <p>
             And join them one to another into one stick; and they shall become

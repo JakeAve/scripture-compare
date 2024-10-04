@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Mrs Saint Delafield';
+    src: url('/fonts/Mrs_Saint_Delafield/MrsSaintDelafield-Regular-abrv.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* fonts are heavy and overrated, but could be nice */
+/* @font-face {
+    font-family: 'Noto Sans';
+    src: url('/fonts/Noto_Sans/static/NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('/fonts/Noto_Serif/static/NotoSerif-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('/fonts/Noto_Serif/static/NotoSerif-LightItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+} */
