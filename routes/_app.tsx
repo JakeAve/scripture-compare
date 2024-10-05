@@ -22,7 +22,7 @@ export default function App({ Component }: PageProps) {
         />
         <script type="module" src="/register.js" />
       </head>
-      <body class="bg-slate-500 dark:bg-slate-700">
+      <body class="bg-slate-500 dark:bg-slate-700  selection:bg-slate-300 selection:text-slate-900">
         <div class="relative bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen">
           <OfflineMessage />
           <Header />

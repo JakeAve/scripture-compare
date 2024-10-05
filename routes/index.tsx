@@ -130,6 +130,28 @@ export default function Home(props: PageProps) {
         </div>
         <div class="flex flex-col gap-2">
           <h2 class="text-xl md:text-2xl text-center">
+            Hebrew Codices
+          </h2>
+          <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
+            <li>
+              <a class="underline" href="/isaiah-aleppo-1-20">
+                Isaiah 1-20 Aleppo and Leningrad Codices
+              </a>
+            </li>
+            <li>
+              <a class="underline" href="/isaiah-aleppo-21-40">
+                Isaiah 21-40 Aleppo and Leningrad Codices
+              </a>
+            </li>
+            <li>
+              <a class="underline" href="/isaiah-aleppo-41-66">
+                Isaiah 41-66 Aleppo and Leningrad Codices
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-xl md:text-2xl text-center">
             Book of Mormon Manuscripts
           </h2>
           <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">

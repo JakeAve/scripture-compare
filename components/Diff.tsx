@@ -23,13 +23,22 @@ export interface DiffProps {
     reference2: Reference;
     intro2?: Verse[];
     outro2?: Verse[];
+    dir?: "ltr" | "rtl";
 }
 
 const side1Color = "bg-blue-200 dark:bg-blue-900";
 const side2Color = "bg-green-200 dark:bg-green-900";
 
 export function Diff(props: DiffProps) {
-    const { reference1, intro1, outro1, reference2, intro2, outro2 } = props;
+    const {
+        reference1,
+        intro1,
+        outro1,
+        reference2,
+        intro2,
+        outro2,
+        dir = "ltr",
+    } = props;
 
     const verses1 = reference1.verses;
     const verses2 = reference2.verses;
@@ -48,7 +57,7 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
+            <p dir={dir} class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side1Color}>{text}</span>
             </p>
@@ -59,7 +68,7 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
+            <p dir={dir} class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side2Color}>{text}</span>
             </p>
@@ -112,7 +121,7 @@ export function Diff(props: DiffProps) {
         if (t.removed) {
             t1Idx++;
             c1.push(
-                <span class={side1Color}>
+                <span dir={dir} class={side1Color}>
                     {t1}
                     {insertSpaceBetween(t1, split1?.[t1Idx])}
                 </span>,
@@ -122,7 +131,7 @@ export function Diff(props: DiffProps) {
         if (t.added) {
             t2Idx++;
             c2.push(
-                <span class={side2Color}>
+                <span dir={dir} class={side2Color}>
                     {t2}
                     {insertSpaceBetween(t2, split2?.[t2Idx])}
                 </span>,
@@ -152,6 +161,7 @@ export function Diff(props: DiffProps) {
             content.push(
                 <p
                     class={`col-start-1 col-span-1`}
+                    dir={dir}
                     style={{
                         gridRow: row1,
                         // `${row1} / ${
@@ -189,6 +199,7 @@ export function Diff(props: DiffProps) {
             content.push(
                 <p
                     class={`col-start-2 col-span-1`}
+                    dir={dir}
                     style={{
                         gridRow: `${row2} / ${
                             row2 < row1 ? currRows1.at(-1) || row2 : row2
@@ -228,7 +239,7 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
+            <p dir={dir} class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side1Color}>{text}</span>
             </p>
@@ -240,14 +251,14 @@ export function Diff(props: DiffProps) {
     );
 
     if (outro1Content.length) {
-        content.push(<p class="col-start-2 col-span-1"></p>);
+        content.push(<p dir={dir} class="col-start-2 col-span-1"></p>);
     }
 
     const outro2Content = (outro2 || []).map(({ chapter, verse, text }) => {
         row1++;
         row2++;
         return (
-            <p class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
+            <p dir={dir} class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side2Color}>{text}</span>
             </p>

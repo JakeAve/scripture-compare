@@ -1,5 +1,5 @@
 export function splitText(text: string): string[] {
-    return text.split(/\s|\n|\b/).filter((v) =>
+    return text.split(/\s|\n|\b|\׃/).filter((v) =>
         v !== "" && v !== "\n" && v !== " "
     );
 }
@@ -18,7 +18,7 @@ export function insertSpaceBetween(
     if (/[\<\(\[]/.test(text1)) {
         return "";
     }
-    return /[a-zA-Z\&\(\)\<]/.test(text2) ? " " : "";
+    return /[א-תa-zA-Z\&\(\)\<]/.test(text2) ? " " : "";
 }
 
 export function endsSpace(text: string) {
