@@ -58,6 +58,7 @@ export default function Header() {
                     class="text-slate-50"
                     href="/"
                     aria-label="Home"
+                    title="Home"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +76,8 @@ export default function Header() {
                 <a
                     class="text-slate-50"
                     href="/about"
-                    aria-label="Help"
+                    aria-label="About"
+                    title="About"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -92,8 +94,8 @@ export default function Header() {
                     href="https://github.com/JakeAve/scripture-compare"
                     target="_blank"
                     rel="noopener"
-                    title="Github"
-                    aria-label="Github"
+                    title="Source Code"
+                    aria-label="Source Code"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
