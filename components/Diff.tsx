@@ -2,7 +2,6 @@ import { JSX } from "preact/jsx-runtime";
 import { diff } from "../lib/diff.ts";
 import { insertSpaceBetween, splitText } from "../lib/textHelpers.ts";
 import WordMatch from "./WordMatch.tsx";
-import DiffHeader from "./DiffHeader.tsx";
 
 interface Verse {
     chapter: number;
@@ -17,10 +16,10 @@ export interface Reference {
 }
 
 export interface DiffProps {
-    reference1: Reference;
+    compare1: Verse[];
     intro1?: Verse[];
     outro1?: Verse[];
-    reference2: Reference;
+    compare2: Verse[];
     intro2?: Verse[];
     outro2?: Verse[];
     dir?: "ltr" | "rtl";
@@ -31,20 +30,20 @@ const side2Color = "bg-green-200 dark:bg-green-900";
 
 export function Diff(props: DiffProps) {
     const {
-        reference1,
+        compare1,
         intro1,
         outro1,
-        reference2,
+        compare2,
         intro2,
         outro2,
         dir = "ltr",
     } = props;
 
-    const verses1 = reference1.verses;
-    const verses2 = reference2.verses;
+    // const compare1 = reference1.verses;
+    // const compare2 = reference2.verses;
 
-    const text1 = verses1.map(({ text }) => text).join("\n");
-    const text2 = verses2.map(({ text }) => text).join("\n");
+    const text1 = compare1.map(({ text }) => text).join("\n");
+    const text2 = compare2.map(({ text }) => text).join("\n");
 
     const d = diff(text1, text2);
 
@@ -57,7 +56,11 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p dir={dir} class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
+            <p
+                dir={dir}
+                class="col-start-1 col-span-1"
+                style={{ gridRow: row1 }}
+            >
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side1Color}>{text}</span>
             </p>
@@ -68,7 +71,11 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p dir={dir} class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
+            <p
+                dir={dir}
+                class="col-start-2 col-span-1"
+                style={{ gridRow: row2 }}
+            >
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side2Color}>{text}</span>
             </p>
@@ -76,25 +83,19 @@ export function Diff(props: DiffProps) {
     });
 
     const content: JSX.Element[] = [
-        <DiffHeader key="a">
-            {reference1.book}
-        </DiffHeader>,
-        <DiffHeader key="b">
-            {reference2.book}
-        </DiffHeader>,
         ...intro1Content,
         <p class="col-start-2 col-span-1"></p>,
         ...intro2Content,
     ];
 
     let v1Idx = 0;
-    let v1: Verse | undefined = verses1[v1Idx];
+    let v1: Verse | undefined = compare1[v1Idx];
     let split1: string[] | undefined = v1 ? splitText(v1.text) : undefined;
     let t1Idx = 0;
     let c1: JSX.Element[] = [];
     let currRows1: number[] = [];
     let v2Idx = 0;
-    let v2: Verse | undefined = verses2[v2Idx];
+    let v2: Verse | undefined = compare2[v2Idx];
     let split2: string[] | undefined = v2 ? splitText(v2.text) : undefined;
     let t2Idx = 0;
     let c2: JSX.Element[] = [];
@@ -185,11 +186,11 @@ export function Diff(props: DiffProps) {
             );
             t1Idx = 0;
             v1Idx++;
-            v1 = verses1[v1Idx];
+            v1 = compare1[v1Idx];
             split1 = v1 ? splitText(v1.text) : undefined;
             c1 = [];
             row1++;
-            if (verses1.length !== verses2.length) {
+            if (compare1.length !== compare2.length) {
                 row1 = Math.max(row1, row2);
             }
             currRows1 = [];
@@ -222,11 +223,11 @@ export function Diff(props: DiffProps) {
             );
             t2Idx = 0;
             v2Idx++;
-            v2 = verses2[v2Idx];
+            v2 = compare2[v2Idx];
             split2 = v2 ? splitText(v2.text) : undefined;
             c2 = [];
             row2++;
-            if (verses1.length !== verses2.length) {
+            if (compare1.length !== compare2.length) {
                 row2 = Math.max(row1, row2);
             }
             currRows2 = [];
@@ -239,7 +240,11 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p dir={dir} class="col-start-1 col-span-1" style={{ gridRow: row1 }}>
+            <p
+                dir={dir}
+                class="col-start-1 col-span-1"
+                style={{ gridRow: row1 }}
+            >
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side1Color}>{text}</span>
             </p>
@@ -258,7 +263,11 @@ export function Diff(props: DiffProps) {
         row1++;
         row2++;
         return (
-            <p dir={dir} class="col-start-2 col-span-1" style={{ gridRow: row2 }}>
+            <p
+                dir={dir}
+                class="col-start-2 col-span-1"
+                style={{ gridRow: row2 }}
+            >
                 <span class="font-medium">{chapter}:{verse}{" "}</span>
                 <span class={side2Color}>{text}</span>
             </p>
@@ -269,12 +278,5 @@ export function Diff(props: DiffProps) {
         ...outro2Content,
     );
 
-    return (
-        <div
-            data-diff-container
-            class="mx-auto grid grid-cols-2 max-w-4xl gap-2 md:gap-4 font-serif relative"
-        >
-            {content}
-        </div>
-    );
+    return <>{content}</>;
 }
