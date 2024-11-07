@@ -21,8 +21,9 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Isaiah 2 - 14"
-                reference1={{ book: "Isaiah", verses: isaiah }}
-                reference2={{ book: "2 Nephi", verses: _2Nephi }}
+                book1="Isaiah"
+                book2="2 Nephi"
+                diffs={[{ compare1: isaiah, compare2: _2Nephi }]}
             />
         </>
     );

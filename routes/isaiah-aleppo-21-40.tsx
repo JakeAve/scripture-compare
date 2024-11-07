@@ -20,10 +20,10 @@ export default function Page(props: PageProps) {
                 snippet="Compare the Aleppo and Leningrad Codices"
             />
             <DiffPage
-                title="Isaiah 21-40"
-                reference1={{ book: "Aleppo Codex", verses: aleppo }}
-                reference2={{ book: "Leningrad Codex", verses: leningrad }}
-                dir="rtl"
+                title="Isaiah 21 - 40"
+                book1="Aleppo Codex"
+                book2="Leningrad Codex"
+                diffs={[{ compare1: aleppo, compare2: leningrad, dir: "rtl" }]}
             />
         </>
     );

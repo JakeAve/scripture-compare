@@ -26,11 +26,9 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Malachi 4 and Angel Moroni"
-                reference1={{ book: "Malachi", verses: john }}
-                reference2={{
-                    book: "Joseph Smith History and Doctrine and Covenants 2",
-                    verses: dc,
-                }}
+                book1="Malachi"
+                book2="Joseph Smith History and Doctrine and Covenants 2"
+                diffs={[{ compare1: john, compare2: dc }]}
             />
         </>
     );

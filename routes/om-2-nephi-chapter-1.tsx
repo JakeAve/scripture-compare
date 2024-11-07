@@ -26,11 +26,12 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Original Book of Mormon Manuscript: 2 Nephi Chapter 1"
-                reference1={{ book: "Original Manuscript", verses: manuscript }}
-                reference2={{
-                    book: "Church of Jesus Christ 2015 Online",
-                    verses: _2015,
-                }}
+                book1="Original Manuscript"
+                book2="Church of Jesus Christ 2015 Online"
+                diffs={[{
+                    compare1: manuscript,
+                    compare2: _2015,
+                }]}
             />
         </>
     );

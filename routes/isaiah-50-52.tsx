@@ -20,9 +20,10 @@ export default function Page(props: PageProps) {
                 snippet="Compare the KVJ text with the quotes from the Book of Mormon"
             />
             <DiffPage
-                title="Isaiah 50-52:2"
-                reference1={{ book: "Isaiah", verses: isaiah50 }}
-                reference2={{ book: "2 Nephi", verses: _2nephi6 }}
+                title="Isaiah 50 - 52:2"
+                book1="Isaiah"
+                book2="2 Nephi"
+                diffs={[{ compare1: isaiah50, compare2: _2nephi6 }]}
             />
         </>
     );

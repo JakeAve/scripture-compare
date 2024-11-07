@@ -36,11 +36,15 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Sermon on the Mount"
-                reference1={{ book: "Matthew", verses: matthew }}
-                reference2={{ book: "3 Nephi", verses: _3Nephi }}
-                intro1={matthewIntro}
-                intro2={_3NephiIntro}
-                outro1={matthewOutro}
+                book1="Matthew"
+                book2="3 Nephi"
+                diffs={[{
+                    intro1: matthewIntro,
+                    outro1: matthewOutro,
+                    compare1: matthew,
+                    intro2: _3NephiIntro,
+                    compare2: _3Nephi,
+                }]}
             />
         </>
     );

@@ -26,9 +26,10 @@ export default function Page(props: PageProps) {
                 snippet="Compare the KVJ text with quote of Jesus Christ from the Book of Mormon"
             />
             <DiffPage
-                title="Malachi 3-4"
-                reference1={{ book: "Malachi", verses: malachi }}
-                reference2={{ book: "3 Nephi", verses: _3Nephi }}
+                title="Malachi 3 - 4"
+                book1="Malachi"
+                book2="3 Nephi"
+                diffs={[{ compare1: malachi, compare2: _3Nephi }]}
             />
         </>
     );
