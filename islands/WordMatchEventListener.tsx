@@ -10,7 +10,7 @@ export default function WordMatchEventListener() {
             if (!target.dataset.wordMatch) {
                 return;
             }
-            const otherId = target.id.includes('a') ? target.id.replace(/a/, 'b') : target.id.replace(/b/, 'a');
+            const otherId = target.id.startsWith('a') ? target.id.replace(/a/, 'b') : target.id.replace(/b/, 'a');
             const otherEl = document.querySelector(`#${otherId}`) as HTMLElement;
             target.classList.toggle('bg-amber-200')
             otherEl.classList.toggle('bg-amber-200')

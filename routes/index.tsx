@@ -95,6 +95,11 @@ export default function Home(props: PageProps) {
               </a>
             </li>
             <li>
+              <a class="underline" href="/3-nephi-20">
+                3 Nephi 20 (Jesus expands on Micah, Acts, Isaiah)
+              </a>
+            </li>
+            <li>
               <a class="underline" href="/micah-5">
                 Micah 5 and 3 Nephi 21
               </a>

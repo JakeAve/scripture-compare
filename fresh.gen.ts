@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $_3_nephi_20 from "./routes/3-nephi-20.tsx";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
@@ -38,6 +39,7 @@ import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
+    "./routes/3-nephi-20.tsx": $_3_nephi_20,
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_middleware.ts": $_middleware,

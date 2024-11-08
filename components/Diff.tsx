@@ -23,6 +23,7 @@ export interface DiffProps {
     intro2?: Verse[];
     outro2?: Verse[];
     dir?: "ltr" | "rtl";
+    startRow?: number;
 }
 
 const side1Color = "bg-blue-200 dark:bg-blue-900";
@@ -37,6 +38,7 @@ export function Diff(props: DiffProps) {
         intro2,
         outro2,
         dir = "ltr",
+        startRow = 1,
     } = props;
 
     // const compare1 = reference1.verses;
@@ -49,8 +51,8 @@ export function Diff(props: DiffProps) {
 
     // Deno.writeTextFileSync("test.json", JSON.stringify(d, null, 4));
 
-    let row1 = 1;
-    let row2 = 1;
+    let row1 = startRow;
+    let row2 = startRow;
 
     const intro1Content = (intro1 || []).map(({ chapter, verse, text }) => {
         row1++;
@@ -144,14 +146,16 @@ export function Diff(props: DiffProps) {
             t2Idx++;
             currRows1.push(row1);
             currRows2.push(row2);
+            const id = crypto.randomUUID();
+
             c1.push(
-                <WordMatch id={"a" + i.toString()}>
+                <WordMatch id={"a" + id}>
                     {t1}
                     {insertSpaceBetween(t1, split1?.[t1Idx])}
                 </WordMatch>,
             );
             c2.push(
-                <WordMatch id={"b" + i.toString()}>
+                <WordMatch id={"b" + id}>
                     {t2}
                     {insertSpaceBetween(t2, split2?.[t2Idx])}
                 </WordMatch>,
