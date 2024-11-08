@@ -39,12 +39,16 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Micah 5 and 3 Nephi 21"
-                reference1={{ book: "Micah", verses: micah }}
-                intro1={micahIntro}
-                outro1={micahOutro}
-                reference2={{ book: "3 Nephi", verses: nephi }}
-                intro2={nephiIntro}
-                outro2={nephiOutro}
+                book1="Micah"
+                book2="3 Nephi"
+                diffs={[{
+                    intro1: micahIntro,
+                    outro1: micahOutro,
+                    compare1: micah,
+                    intro2: nephiIntro,
+                    outro2: nephiOutro,
+                    compare2: nephi,
+                }]}
             />
         </>
     );

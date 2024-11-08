@@ -29,9 +29,13 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Joseph Smith Matthew"
-                reference1={{ book: "Matthew", verses: matthew }}
-                reference2={{ book: "Joseph Smith Matthew", verses: jsMatthew }}
-                outro2={jsMatthewOutro}
+                book1="Matthew"
+                book2="Joseph Smith Matthew"
+                diffs={[{
+                    compare1: matthew,
+                    compare2: jsMatthew,
+                    outro2: jsMatthewOutro,
+                }]}
             />
         </>
     );

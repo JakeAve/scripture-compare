@@ -27,10 +27,14 @@ export default function Page(props: PageProps) {
             />
             <DiffPage
                 title="Isaiah 29"
-                reference1={{ book: "Isaiah", verses: isaiah }}
-                intro1={isaiahIntro}
-                reference2={{ book: "2 Nephi", verses: nephi }}
-                intro2={nephiIntro}
+                book1="Isaiah"
+                book2="2 Nephi"
+                diffs={[{
+                    intro1: isaiahIntro,
+                    intro2: nephiIntro,
+                    compare1: isaiah,
+                    compare2: nephi,
+                }]}
             />
         </>
     );

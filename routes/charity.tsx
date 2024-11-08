@@ -28,17 +28,27 @@ export default function Page(props: PageProps) {
                 author="Scripture Compare"
                 title="Charity"
                 imgPath="scrolls"
-                tags={["Corinthians", "Bible", "Book of Mormon", "Moroni", "Paul"]}
+                tags={[
+                    "Corinthians",
+                    "Bible",
+                    "Book of Mormon",
+                    "Moroni",
+                    "Paul",
+                ]}
                 snippet="Compare the KVJ text with the the Book of Mormon"
             />
             <DiffPage
                 title="Charity"
-                reference1={{ book: "1 Corinthians", verses: corinthians }}
-                intro1={corinthiansIntro}
-                outro1={corinthiansOutro}
-                reference2={{ book: "Moroni", verses: moroni }}
-                intro2={moroniIntro}
-                outro2={moroniOutro}
+                book1="1 Corinthians"
+                book2="Moroni"
+                diffs={[{
+                    compare1: corinthians,
+                    compare2: moroni,
+                    intro1: corinthiansIntro,
+                    outro1: corinthiansOutro,
+                    intro2: moroniIntro,
+                    outro2: moroniOutro,
+                }]}
             />
         </>
     );
