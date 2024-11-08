@@ -82,7 +82,7 @@ export default function Page(props: PageProps) {
             <DiffPage
                 title="3 Nephi 20"
                 book1="3 Nephi 20"
-                book2="King James"
+                book2="King James Bible"
                 diffs={[
                     {
                         intro1: _3nephi_20_1_15,
