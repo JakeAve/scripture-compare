@@ -110,6 +110,11 @@ export default function Home(props: PageProps) {
               </a>
             </li>
             <li>
+              <a class="underline" href="/mark-16">
+                Mark 16 and Mormon 9
+              </a>
+            </li>
+            <li>
               <a class="underline" href="/charity">
                 1 Corinthians 13 and Moroni 7 (Charity)
               </a>
