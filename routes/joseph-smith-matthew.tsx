@@ -25,7 +25,7 @@ export default function Page(props: PageProps) {
                     "Joseph Smith",
                     "Pearl of Great Price",
                 ]}
-                snippet="Compare the KVJ text with the inspired Joseph Smith translation"
+                snippet="Compare the King Jame's Bible text with the inspired Joseph Smith translation of Matthew 24."
             />
             <DiffPage
                 title="Joseph Smith Matthew"

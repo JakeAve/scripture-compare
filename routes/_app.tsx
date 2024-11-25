@@ -10,7 +10,7 @@ export default function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta
           name="description"
-          content="Compare scripture passages versions side-by-side"
+          content="Level up your study and compare passages from the scriptures side-by-side, including the Book of Mormon Isaiah chapters, Joseph Smith Matthew and the words of Christ in His ancient American ministry."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Scripture Compare</title>

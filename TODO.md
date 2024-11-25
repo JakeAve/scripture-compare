@@ -4,5 +4,5 @@
 - [ ] Be able to select which edition of the Book of Mormon to use
 - [ ] There could be cool Old Testament and New Testament manuscript comparisons, but they would be in Hebrew or Greek. How do you handle the translations?
 - [x] Add some pwa capabilities for offline power
-- [ ] More Bible passage comparisons can be looked at, especially in 3 Nephi
+- [x] More Bible passage comparisons can be looked at, especially in 3 Nephi
 - [x] Add direct links to the verses / pages

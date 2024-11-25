@@ -17,7 +17,7 @@ export default function Page(props: PageProps) {
                 title="Isaiah 48-49"
                 imgPath="scrolls"
                 tags={["Isaiah", "Bible", "Book of Mormon"]}
-                snippet="Compare the KVJ text with the quotes from the Book of Mormon"
+                snippet="Compare the King Jame's Bible text of the prophet Isaiah with quotes from the Book of Mormon, as copied from the an ancient version of Isaiah found the Brass Plates."
             />
             <DiffPage
                 title="Isaiah 48 - 49"

@@ -23,7 +23,7 @@ export default function Page(props: PageProps) {
                     "Joseph Smith",
                     "Book of Mormon",
                 ]}
-                snippet="Compare the KVJ text with quote of Jesus Christ from the Book of Mormon"
+                snippet="Compare the King James Bible text from the prophet Malachi with the quote of Jesus Christ as found in the Book of Mormon."
             />
             <DiffPage
                 title="Malachi 3 - 4"

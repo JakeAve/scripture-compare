@@ -35,7 +35,7 @@ export default function Page(props: PageProps) {
                     "Moroni",
                     "Paul",
                 ]}
-                snippet="Compare the KVJ text with the the Book of Mormon"
+                snippet="Compare the King Jame's Bible text about charity and pure love from Paul in his 1 Corinthians epistle with text in the Book of Mormon by the prophet Mormon."
             />
             <DiffPage
                 title="Charity"

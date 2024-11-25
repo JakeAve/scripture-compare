@@ -77,7 +77,7 @@ export default function Page(props: PageProps) {
                     "Acts",
                     "Stephen",
                 ]}
-                snippet="Compare 3 Nephi 20 to KJV texts as Jesus Christ expounds Biblical teachings"
+                snippet="Compare 3 Nephi 20 to passages from the King Jame's Bible as Jesus Christ quotes and expounds on Biblical teachings."
             />
             <DiffPage
                 title="3 Nephi 20"

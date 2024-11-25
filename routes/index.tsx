@@ -9,7 +9,7 @@ export default function Home(props: PageProps) {
         pageProps={props}
         author="Scripture Compare"
         title="Scripture Compare"
-        snippet="Compare the scriptures side-by-side"
+        snippet="Level up your study and compare passages from the scriptures side-by-side, including the Book of Mormon Isaiah chapters, Joseph Smith Matthew and the words of Christ in His ancient American ministry."
         imgPath="two-scrolls"
         tags={[
           "Scriptures",

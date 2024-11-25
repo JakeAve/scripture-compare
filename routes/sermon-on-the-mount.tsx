@@ -32,7 +32,7 @@ export default function Page(props: PageProps) {
                     "Jesus Christ",
                     "Joseph Smith",
                 ]}
-                snippet="Compare the KJV of Matthew 5-6 and the quote from Jesus Christ in the Americas from the Book of Mormon"
+                snippet="Compare the King James Bible text of Matthew 5-6 and the quote from Jesus Christ during His ministry in the ancient Americas from the Book of Mormon."
             />
             <DiffPage
                 title="Sermon on the Mount"

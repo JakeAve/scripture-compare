@@ -22,7 +22,7 @@ export default function Page(props: PageProps) {
                     "Joseph Smith",
                     "Doctrine and Covenants 2",
                 ]}
-                snippet="Compare Malachi 4 with Angel Moroni's recitation to the prophet on September 21, 1823"
+                snippet="Compare Malachi 4 from the King Jame's Bible with Angel Moroni's recitation to the prophet Joseph Smith on September 21, 1823, as recorded in Joseph Smith's history."
             />
             <DiffPage
                 title="Malachi 4 and Angel Moroni"

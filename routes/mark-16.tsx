@@ -23,7 +23,7 @@ export default function Page(props: PageProps) {
                     "Jesus",
                     "Mark Longer Ending",
                 ]}
-                snippet="Compare the KVJ text with the quotes from the Book of Mormon"
+                snippet="Compare the King Jame's Bible text, recorded in the longer ending of Mark, with the quote of Jesus Christ from the Book of Mormon, recorded by Moroni."
             />
             <DiffPage
                 title="Mark 16 Longer Ending"
