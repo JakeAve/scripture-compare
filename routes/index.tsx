@@ -132,6 +132,11 @@ export default function Home(props: PageProps) {
               </a>
             </li>
             <li>
+              <a class="underline" href="/dc-5">
+                Doctrine and Covenants 5
+              </a>
+            </li>
+            <li>
               <a class="underline" href="/joseph-smith-matthew">
                 Matthew 23-24 and Joseph Smith Matthew
               </a>
