@@ -91,7 +91,7 @@ export default function Home(props: PageProps) {
           <ul class="flex flex-col gap-2 bg-slate-100 dark:bg-slate-800 shadow-md p-6 rounded-md">
             <li>
               <a class="underline" href="/sermon-on-the-mount">
-                Matthew 5-6 and 3 Nephi 12-13 (Sermon on the Mount)
+                Matthew 5-6 and 3 Nephi 12-14 (Sermon on the Mount)
               </a>
             </li>
             <li>
