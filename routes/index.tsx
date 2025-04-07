@@ -147,8 +147,8 @@ export default function Home(props: PageProps) {
               </a>
             </li>
             <li>
-              <a class="underline" href="/dc-6">
-                Doctrine and Covenants 6
+              <a class="underline" href="/dc-27">
+                Doctrine and Covenants 27
               </a>
             </li>
             <li>

@@ -8,10 +8,10 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
 import * as $about from "./routes/about.tsx";
 import * as $charity from "./routes/charity.tsx";
+import * as $dc_27 from "./routes/dc-27.tsx";
 import * as $dc_3 from "./routes/dc-3.tsx";
 import * as $dc_4 from "./routes/dc-4.tsx";
 import * as $dc_5 from "./routes/dc-5.tsx";
-import * as $dc_6 from "./routes/dc-6.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $isaiah_2_14 from "./routes/isaiah-2-14.tsx";
 import * as $isaiah_29 from "./routes/isaiah-29.tsx";
@@ -50,10 +50,10 @@ const manifest = {
     "./routes/_middleware.ts": $_middleware,
     "./routes/about.tsx": $about,
     "./routes/charity.tsx": $charity,
+    "./routes/dc-27.tsx": $dc_27,
     "./routes/dc-3.tsx": $dc_3,
     "./routes/dc-4.tsx": $dc_4,
     "./routes/dc-5.tsx": $dc_5,
-    "./routes/dc-6.tsx": $dc_6,
     "./routes/index.tsx": $index,
     "./routes/isaiah-2-14.tsx": $isaiah_2_14,
     "./routes/isaiah-29.tsx": $isaiah_29,
