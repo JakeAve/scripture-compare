@@ -6,3 +6,5 @@
 - [x] Add some pwa capabilities for offline power
 - [x] More Bible passage comparisons can be looked at, especially in 3 Nephi
 - [x] Add direct links to the verses / pages
+- [ ] Add anchor links for each verse
+- [ ] Add PWA versioning
